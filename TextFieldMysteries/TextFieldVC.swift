@@ -10,6 +10,9 @@ import UIKit
 
 class TextFieldVC: UIViewController, UITextFieldDelegate {
 
+	@IBOutlet weak var txtFldName: UITextField!
+	@IBOutlet weak var txtfldPassword: UITextField!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +24,14 @@ class TextFieldVC: UIViewController, UITextFieldDelegate {
 	}
 
 
+	func textFieldShouldReturn(textField: UITextField) -> Bool {
+		if textField == txtFldName {
+			txtfldPassword.becomeFirstResponder()
+		}
+		else{
+			textField.resignFirstResponder()
+		}
+		return true
+	}
 }
 

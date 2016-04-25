@@ -74,6 +74,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="txtFldName" destination="2Jf-aY-AQl" id="sfR-YQ-We1"/>
+                        <outlet property="txtfldPassword" destination="cGM-Rs-mcE" id="ZcK-hR-gjR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
