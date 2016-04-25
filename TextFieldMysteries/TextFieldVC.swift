@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TextFieldVC: UIViewController, UITextFieldDelegate {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
