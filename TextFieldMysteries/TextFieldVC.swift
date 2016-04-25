@@ -31,7 +31,7 @@ class TextFieldVC: UIViewController, UITextFieldDelegate {
 		else{
 			textField.resignFirstResponder()
 		}
-		return true
+		return true // returning true means process the logic.
 	}
 }
 
