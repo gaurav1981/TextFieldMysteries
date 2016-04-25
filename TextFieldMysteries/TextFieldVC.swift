@@ -25,6 +25,7 @@ class TextFieldVC: UIViewController, UITextFieldDelegate {
 
 
 	func textFieldShouldReturn(textField: UITextField) -> Bool {
+		print(" In the textFieldShouldReturn")
 		if textField == txtFldName {
 			txtfldPassword.becomeFirstResponder()
 		}
@@ -34,6 +35,26 @@ class TextFieldVC: UIViewController, UITextFieldDelegate {
 		
 		//return true // returning true means process the logic.
 		return false //still remains a mystery.
+	}
+	
+	func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+		if textField == txtfldPassword {
+			textField.text?.localizedUppercaseString
+		}
+		return true
+	}
+	
+	
+	func textFieldDidBeginEditing(textField: UITextField) {
+		print("In textFieldDidBeginEditing")
+		textField.text?.capitalizedString
+	}
+	
+	func textFieldDidEndEditing(textField: UITextField) {
+		print("In the textFieldDidEndEditing ")
+		if textField == txtFldName {
+			txtfldPassword.becomeFirstResponder()
+		}
 	}
 }
 
